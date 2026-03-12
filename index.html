@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Mon App Electron</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📄 Electron Éditeur</h1>
+    <span id="filepath">Aucun fichier ouvert</span>
+  </header>
+
+  <div class="toolbar">
+    <button id="btn-theme" class="secondary">Changer le Thème</button>
+    <button id="btn-open">Ouvrir un fichier</button>
+    <button id="btn-clear" class="danger">Supprimer le texte</button>
+    <button id="btn-save">Sauvegarder le fichier</button>
+    
+  </div>
+
+  <div class="editor-area">
+    <textarea id="editor" placeholder="Commencer à écrire ou ouvrir un fichier"></textarea>
+  </div>
+
+  <div class="statusbar" id="statusbar">Prêt</div>
+
+  <script type="module" src="renderer.js"></script>
+</body>
+</html>
